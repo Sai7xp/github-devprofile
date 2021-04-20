@@ -1,0 +1,30 @@
+{
+  "name": "github-devprofile",
+  "version": "1.0.7",
+  "description": "Github profile widget to include in your portfolio site",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "serve src",
+    "build": "node build/build.main.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "github",
+    "git profile",
+    "dashboard",
+    "github-dashboard"
+  ],
+  "author": "saisumanth",
+  "license": "MIT",
+  "devDependencies": {
+    "@node-minify/core": "^5.3.0",
+    "@node-minify/terser": "^5.2.1",
+    "fs-extra": "^8.1.0",
+    "serve": "^11.2.0"
+  },
+  "dependencies": {
+    "@node-minify/uglify-js": "^5.3.0"
+  }
+}
