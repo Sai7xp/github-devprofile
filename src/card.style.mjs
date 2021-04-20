@@ -1,8 +1,11 @@
 export const css = /* css */ `
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
 *{
 	margin:0;
 	padding:0;
+}
+body {
+	font-family: 'Jost', sans-serif;
 }
  .center {
 	overflow-x:hidden;
