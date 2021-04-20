@@ -5,6 +5,7 @@ Use this minimal and beautiful github profile card in your personal site.
 
 *Design credits : Matthias Martin*
 
+![alt text](https://github.com/MovingMelody/github-devprofile/blob/main/src/mirror.png "Logo Title Text 1")
 ![alt text](https://raw.githubusercontent.com/MovingMelody/Premium-Fonts/master/Annotation%202020-06-19%20171727.png "Logo Title Text 1")
 
 
