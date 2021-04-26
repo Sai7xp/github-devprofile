@@ -36,15 +36,15 @@ background-size: cover;
 }
 .titleName{
 	position:absolute;
-	top:36;
 	writing-mode: vertical-rl;
 	text-orientation: mixed;
-	left:6;
+	margin-left:6px;
+	margin-top:36px;
 	opacity:0.5;
 	color:#24292E;
 	font-family: Consolas, monaco, monospace;
 	font-size:0.9rem;
-	// text-transform:uppercase;
+	
 	font-weight:bold;
 }
 .bg-img{
@@ -148,6 +148,7 @@ background-size: cover;
 	 background: #B9C9E1;
 	 cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🦄</text></svg>")
       12 0, auto;
+	  cursor:auto;
 }
  .stats .box:nth-child(2) {
 	 margin: 1px 0;
