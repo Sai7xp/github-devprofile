@@ -5,7 +5,7 @@ export const css = /* css */ `
 	padding:0;
 }
 body {
-	font-family: 'Jost', sans-serif;
+	font-family: Consolas, monaco, monospace;
 }
  .center {
 	overflow-x:hidden;
@@ -28,7 +28,22 @@ background-size: cover;
 	 height: 320px;
      text-align: center;
      background-size: cover;
+	 position:relative;
+
     
+}
+.titleName{
+	position:absolute;
+	top:36;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	left:6;
+	opacity:0.5;
+	color:#24292E;
+	font-family: Consolas, monaco, monospace;
+	font-size:0.9rem;
+	// text-transform:uppercase;
+	font-weight:bold;
 }
 .bg-img{
     opacity:0.6;
@@ -129,7 +144,8 @@ background-size: cover;
  .stats .box:hover {
 	//  background: #ffc5b8;
 	 background: #B9C9E1;
-	 cursor: pointer;
+	 cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🦄</text></svg>")
+      12 0, auto;
 }
  .stats .box:nth-child(2) {
 	 margin: 1px 0;
@@ -154,5 +170,8 @@ a{
 }
 button {
 	font-family : inherit;
+	cursor:pointer;
+	cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>")
+	12 0, auto;
 }
 `;
