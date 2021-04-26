@@ -56,7 +56,7 @@ export class GitProfile extends HTMLElement {
         url: this.userGitData.html_url,
         followers: this.userGitData.followers,
         following: this.userGitData.following,
-        bio: this.userGitData.bio,
+        bio: this.userGitData.bio || "nothing",
         repos: this.userGitData.public_repos,
       };
 
@@ -74,7 +74,7 @@ export class GitProfile extends HTMLElement {
           <img src=${data.profilePic} width="70" height="70" alt="hey user">
         </div>
         <div class="name">${data.name}</div>
-        <div class="job">${this.userGitData.location}</div>
+        <div class="job">${this.userGitData.location || "earth"}</div>
         <div class="job">Bio : ${data.bio}</div>
         
         

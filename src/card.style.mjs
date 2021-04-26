@@ -6,10 +6,12 @@ export const css = /* css */ `
 }
 body {
 	font-family: Consolas, monaco, monospace;
+	
 }
  .center {
 	overflow-x:hidden;
 	overflow-y:hidden;
+	position:relative;
 	 height: 300px;
 	 width: 320px;
 	 background: #ffffff;
@@ -28,7 +30,7 @@ background-size: cover;
 	 height: 320px;
      text-align: center;
      background-size: cover;
-	 position:relative;
+	
 
     
 }
