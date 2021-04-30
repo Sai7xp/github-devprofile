@@ -11,7 +11,7 @@ Use this minimal and beautiful github profile card in your personal site.
 
 
 - Include these two-lines of code in your .html file
-> current version 2.0.0
+> current version 2.0.2
 
 ```javascript
 <git-widget data-username="your-user-name"></git-widget>

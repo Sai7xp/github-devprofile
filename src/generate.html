@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="GitHub Profile Card Generator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Card Generator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/github-devprofile@2/dist/card.component.min.mjs" type="module"></script>
+    <style>
+        body {
+            display: flex;
+            margin: auto;
+            /* margin-top: 100px; */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 640px;
+            padding: 12px 10px 10px 10px;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #E6EEF6;
+        }
+
+        h2 {
+            color: #33446B;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .gen-btn {
+            border: none;
+            color: #F3B506;
+            padding: 4px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-family: 'Quicksand', sans-serif;
+            margin-bottom: 20px;
+            background: #FAF0C1;
+            border: 1.4px solid #F3B506;
+            box-sizing: border-box;
+            box-shadow: 2px 4px 5px rgba(253, 213, 111, 0.25);
+        }
+
+        .gen-btn2,
+        .copy-code {
+            border: none;
+            color: #33446B;
+            padding: 4px 60px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-family: 'Quicksand', sans-serif;
+            margin-bottom: 40px;
+            background: #B9C9E1;
+            /* border: 1.4px solid #33446B; */
+            box-sizing: border-box;
+            box-shadow: 2px 4px 5px rgba(158, 158, 158, 0.25);
+            outline: none;
+            cursor: pointer;
+        }
+
+        .copy-code {
+            margin-top: 20px;
+            display: block;
+        }
+
+        .input-btn {
+            margin-bottom: 20px;
+            font-family: 'Quicksand', sans-serif;
+            border-radius: 8px;
+            border: 1.4px solid #33446B;
+            font-size: 16px;
+            background-color: transparent;
+            padding: 4px 20px;
+            color: #33446B;
+            outline: none;
+        }
+
+        .widget-cont {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 20px;
+            align-items: center;
+        }
+
+        .code-cont {
+            margin-left: 40px;
+            display: inline-block;
+            max-width: 360px;
+        }
+
+        .copy-code {
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        code {
+            display: block;
+            padding: 10px 20px;
+            font-size: 14px;
+            min-height: 80px;
+        }
+
+        pre {
+            max-width: 360px;
+
+        }
+
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+
+        @keyframes octocat-wave {
+
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+
+        @media (max-width:675px) {
+            .widget-cont {
+                flex-direction: column;
+                margin: 0px;
+            }
+
+            .code-cont {
+                margin-top: 40px;
+                margin-left: 0px;
+                max-width: 320px;
+            }
+
+            .copy-code {
+                margin: auto;
+                margin-top: 20px;
+                margin-bottom: 40px;
+            }
+        }
+
+        #copy-txt {
+            visibility: hidden;
+            position: fixed;
+            top: 30px;
+            left: 50%;
+            min-width: 200px;
+            margin-left: -100px;
+            background-color: #F3B506;
+            color: #FAF0C1;
+            text-align: center;
+            border-radius: 50px;
+            padding: 12px;
+            z-index: 1;
+        }
+
+        #copy-txt.show {
+            visibility: visible;
+            -webkit-animation: fadein .5s, fadeout .5s 2.5s;
+            animation: fadein .5s, fadeout .5s 2.5s
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                top: 0;
+                opacity: 0
+            }
+
+            to {
+                top: 30px;
+                opacity: 1
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                top: 0;
+                opacity: 0
+            }
+
+            to {
+                top: 30px;
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes fadeout {
+            from {
+                top: 30px;
+                opacity: 1
+            }
+
+            to {
+                top: 0;
+                opacity: 0
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                top: 30px;
+                opacity: 1
+            }
+
+            to {
+                top: 0;
+                opacity: 0
+            }
+        }
+
+
+        @media (max-width:500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+
+        .marg {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://your-url" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80"
+            viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;"
+            aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg></a>
+    <h2>GitHub Dev Widget</h2>
+    <!-- <button class="gen-btn">Generate</button> -->
+    <input type="text" class="input-btn" id="username" placeholder="Enter Username" value="movingmelody">
+
+    <button class="gen-btn2">GENERATE</button>
+    <div class="widget-cont">
+        <div class="card"></div>
+        <!-- <git-widget data-username="movingmelody"></git-widget> -->
+        <div class="code-cont">
+            <pre><code class="html mainCode">...</code></pre>
+            <button class="copy-code">Copy Snippet</button>
+        </div>
+        <div id="copy-txt">&#x2714; Success</div>
+    </div>
+    <script src="https://unpkg.com/github-devprofile@2/dist/card.component.min.mjs" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+        function generateWidget() {
+            const username = document.querySelector('#username').value;
+            // console.log(username);
+            const cardCode = `<git-widget data-username="${username}"></git-widget>`;
+            document.querySelector('.card').innerHTML = cardCode;
+            let scripttagCode = `&lt;script src="https://unpkg.com/github-devprofile@2/dist/card.component.min.mjs" type="module"&gt;&lt;/script&gt;`;
+
+            let totalCode = (cardCode + '\n\n' + scripttagCode).replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            console.log(totalCode);
+            document.querySelector('.mainCode').innerHTML = totalCode;
+            hljs.highlightBlock(document.querySelector('code'));
+        }
+
+        function copy() {
+            console.log("okay copied");
+            let text = document.querySelector('.mainCode');
+
+            const virtualField = document.createElement('textarea');
+            virtualField.style.position = 'fixed';
+            virtualField.style.top = '-9999999px';
+            document.body.append(virtualField);
+            virtualField.value = text.innerText.replace(/\n/g, '\r\n');
+            virtualField.select();
+            virtualField.setSelectionRange(0, 99999)
+            document.execCommand("copy");
+            var copyToast = document.getElementById("copy-txt");
+            copyToast.className = "show";
+            setTimeout(function () { copyToast.className = copyToast.className.replace("show", ""); }, 3000);
+        }
+
+
+
+        // event listeners
+        document.querySelector('.copy-code').addEventListener('click', copy);
+        document.querySelector('.gen-btn2').addEventListener('click', e => {
+            e.preventDefault();
+            generateWidget();
+        });
+
+        generateWidget();
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+
+</html>
