@@ -60,6 +60,15 @@ export class GitProfile extends HTMLElement {
         repos: this.userGitData.public_repos,
       };
 
+      // let's trim the user bio here
+      var trimmedBio =
+        data.bio.length > 24
+          ? data.bio.substring(0, 22) + "-" +
+            "<br>" +
+            data.bio.substring(22, 38) +
+            "..."
+          : data.bio;
+
       content.innerHTML += /* html */ `
         
       <div class="center">
@@ -75,7 +84,7 @@ export class GitProfile extends HTMLElement {
         </div>
         <div class="name">${data.name}</div>
         <div class="job">${this.userGitData.location || "earth"}</div>
-        <div class="job">Bio : ${data.bio}</div>
+        <div class="job">Bio : ${trimmedBio}</div>
         
         
         <div class="actions">
@@ -110,7 +119,6 @@ export class GitProfile extends HTMLElement {
       .then((userGitData) => {
         console.log(userGitData);
         this.userGitData = userGitData;
-
         if (1 === 1) {
           this.createCard();
         }

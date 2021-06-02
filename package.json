@@ -1,6 +1,6 @@
 {
   "name": "github-devprofile",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Github profile widget to include in your portfolio site",
   "main": "dist/index.js",
   "module": "dist/index.js",

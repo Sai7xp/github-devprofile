@@ -1,7 +1,10 @@
 Use this minimal and beautiful github profile card in your personal site.
 
+> ***Codepen Link*** --> [https://codepen.io/sumanth2303/pen/WNroqXo](https://codepen.io/sumanth2303/pen/WNroqXo)
 
-> Inspired by saurabhdaware dev-widget.
+> ***Generate your card here*** --> [https://github-devprofile-card.netlify.app/generate](https://github-devprofile-card.netlify.app/generate)
+
+ Inspired by saurabhdaware dev-widget.
 
 *Design credits : Matthias Martin*
 
