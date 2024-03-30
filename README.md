@@ -2,6 +2,8 @@ Use this minimal and beautiful github profile card in your personal site.
 
 > ***Codepen Link*** --> [https://codepen.io/sumanth2303/pen/WNroqXo](https://codepen.io/sumanth2303/pen/WNroqXo)
 
+> ***NPM Js Link*** --> [https://www.npmjs.com/package/github-devprofile](https://www.npmjs.com/package/github-devprofile)
+
 > ***Generate your card here*** --> [https://github-devprofile-card.netlify.app/generate](https://github-devprofile-card.netlify.app/generate)
 
  Inspired by saurabhdaware dev-widget.
