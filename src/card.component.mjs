@@ -76,7 +76,7 @@ export class GitProfile extends HTMLElement {
       
       <div class="profile">
       <p class="titleName">GitHub Profile</p>
-      <img src="https://raw.githubusercontent.com/MovingMelody/github-devprofile/83e5567b0084187039e44403319bf49b736c0875/src/3.svg"  class="bg-img" />
+      <img src="https://raw.githubusercontent.com/Sai7xp/github-devprofile/83e5567b0084187039e44403319bf49b736c0875/src/3.svg"  class="bg-img" />
         <div class="image">
           <div class="circle-1"></div>
           <div class="circle-2"></div>
